@@ -11,6 +11,8 @@ exports.signup = (req, res, next) => {
 			const user = new User({
 				// ... grâce à l'adresse mail passée dans le corps de la requête...
 				email: req.body.email,
+				// User ID ???
+				// userId: mongoose.ObjectId,
 				// ... avec un nouveau mot de passe tout de suite crypté...
 				password: hash
 			});

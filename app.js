@@ -14,7 +14,7 @@ const userRoutes = require('./routes/user');
 const path = require('path');
 
 // On connecte à la base de donnée mongoDB
-mongoose.connect('mongodb+srv://MD:test1234@cluster0.vwanv.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://AppUser:1234test@cluster0.vwanv.mongodb.net/test?retryWrites=true&w=majority',
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true
@@ -44,7 +44,7 @@ app.use(bodyParser.json());
 // Racine de tout ce qui est root lié aux images
 app.use('/images', express.static(path.join(__dirname, 'images')));
 // Racine de tout ce qui est root lié aux objets
-app.use("/api/stuff", stuffRoutes);
+app.use("/api/sauces", stuffRoutes);
 // Racine de tout ce qui est root lié à l'authentification
 app.use('/api/auth', userRoutes);
 
