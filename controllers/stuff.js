@@ -145,7 +145,6 @@ exports.likeThing = async (req, res, next) => {
 		const SAUCE = await Thing.findOne(
 			{ _id: req.params.id }
 		);
-		console.log(SAUCE);
 		// Pour pouvoir utiliser :
 		// SAUCE.likes;
 		// SAUCE.dislikes;
